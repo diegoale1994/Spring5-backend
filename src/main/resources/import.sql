@@ -1,0 +1,10 @@
+INSERT INTO clientes (nombre,apellido,email,create_at) VALUES('diego','franco','diego.fc.1@hotmail.com','2019-01-13');
+INSERT INTO clientes (nombre,apellido,email,create_at) VALUES('diego1','franco1','diego1.fc.1@hotmail.com','2019-01-01');
+INSERT INTO clientes (nombre,apellido,email,create_at) VALUES('diego2','franco2','diego2.fc.1@hotmail.com','2019-01-03');
+INSERT INTO clientes (nombre,apellido,email,create_at) VALUES('diego3','franco3','diego3.fc.1@hotmail.com','2019-01-04');
+INSERT INTO clientes (nombre,apellido,email,create_at) VALUES('diego4','franco4','diego4.fc.1@hotmail.com','2019-01-05');
+INSERT INTO clientes (nombre,apellido,email,create_at) VALUES('diego5','franco5','diego5.fc.1@hotmail.com','2019-01-05');
+INSERT INTO clientes (nombre,apellido,email,create_at) VALUES('diego6','franco6','diego6.fc.1@hotmail.com','2019-01-06');
+INSERT INTO clientes (nombre,apellido,email,create_at) VALUES('diego7','franco7','diego7.fc.1@hotmail.com','2019-01-06');
+INSERT INTO clientes (nombre,apellido,email,create_at) VALUES('diego8','franco8','diego8.fc.1@hotmail.com','2019-01-09');
+INSERT INTO clientes (nombre,apellido,email,create_at) VALUES('diego9','franco9','diego9.fc.1@hotmail.com','2019-01-10');
