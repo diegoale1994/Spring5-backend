@@ -36,7 +36,6 @@ public class ClienteServiceImpl implements IClienteService {
 	@Transactional
 	public void delete(long id) {
 	clienteDao.deleteById(id);
-		
 	}
 
 }
