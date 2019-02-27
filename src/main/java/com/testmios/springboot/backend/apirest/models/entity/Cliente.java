@@ -14,35 +14,37 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name="clientes")
+@Table(name = "clientes")
 public class Cliente implements Serializable {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	@NotEmpty(message = "No puede estar vacio !")
-	@Size(min= 4, max = 15, message = "El tamaño debe estar entre 4 y 15 caracteres !")
-	@Column(nullable=false)
+	@Size(min = 4, max = 15, message = "El tamaño debe estar entre 4 y 15 caracteres !")
+	@Column(nullable = false)
 	private String nombre;
 	@NotEmpty(message = "No puede estar vacio !")
 	private String apellido;
 	@NotEmpty(message = "No puede estar vacio !")
-	@Email(message="No es una dirección de correo bien formada !")
-	@Column(nullable=false, unique=true)
+	@Email(message = "No es una dirección de correo bien formada !")
+	@Column(nullable = false, unique = false)
 	private String email;
-	@Column(name="create_at")
+	@Column(name = "create_at")
 	@Temporal(TemporalType.DATE)
+	@NotNull(message="No puede estar vacio")
+	private Date createAt;
 	
-	@PrePersist
+	private String foto;
+	/*@PrePersist
 	public void prePersist() {
 		createAt = new Date();
 	}
-	
-	private Date createAt;
-
+*/
 	public long getId() {
 		return id;
 	}
@@ -82,7 +84,16 @@ public class Cliente implements Serializable {
 	public void setCreateAt(Date createAt) {
 		this.createAt = createAt;
 	}
-	
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
+
 	/**
 	 * 
 	 */
