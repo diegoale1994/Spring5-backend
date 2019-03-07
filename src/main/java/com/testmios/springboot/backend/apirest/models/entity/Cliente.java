@@ -48,7 +48,7 @@ public class Cliente implements Serializable {
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="region_id")
 	@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
-	@NotNull(message = "La Region debe ser establecida")
+	@NotNull(message = "No puede nulo !")
 	private Region region;
 
 	/*

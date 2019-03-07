@@ -1,23 +1,38 @@
 package com.testmios.springboot.backend.apirest.models.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.NotEmpty;
 
 @Entity
-@Table(name = "regiones")
-public class Region implements Serializable {
+@Table(name = "roles")
+public class Role implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String nombre;
 
+	@Column(unique = true, length = 20)
+	private String nombre;
+/*
+	@ManyToMany(mappedBy = "roles")
+	private List<Usuario> usuarios;
+
+	public List<Usuario> getUsuarios() {
+		return usuarios;
+	}
+
+	public void setUsuarios(List<Usuario> usuarios) {
+		this.usuarios = usuarios;
+	}
+*/
 	public Long getId() {
 		return id;
 	}

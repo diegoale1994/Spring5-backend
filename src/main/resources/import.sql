@@ -1,4 +1,4 @@
-INSERT INTO clientes (region_id,nombre,apellido,email,create_at) VALUES(1,'diego','franco','diego.fc.1@hotmail.com','2019-01-13');
+INSERT INTO clientes (region_id,nombre,apellido,email,create_at) VALUES(1,'diego','franco','diego.fc.1@hotmail.com','2018-01-15');
 INSERT INTO clientes (region_id,nombre,apellido,email,create_at) VALUES(2,'diego1','franco1','diego1.fc.1@hotmail.com','2019-01-01');
 INSERT INTO clientes (region_id,nombre,apellido,email,create_at) VALUES(7,'diego2','franco2','diego2.fc.1@hotmail.com','2019-01-03');
 INSERT INTO clientes (region_id,nombre,apellido,email,create_at) VALUES(1,'diego3','franco3','diego3.fc.1@hotmail.com','2019-01-04');

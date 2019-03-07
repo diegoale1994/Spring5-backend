@@ -28,7 +28,7 @@ public class ClienteServiceImpl implements IClienteService {
 	@Transactional(readOnly=true)
 	public Page<Cliente> findAll(Pageable page) {
 		// TODO Auto-generated method stub
-		return clienteDao.findAll(page);
+		return clienteDao.findAllByOrderByCreateAtDesc(page);
 	} 
 	
 	
@@ -56,4 +56,5 @@ public class ClienteServiceImpl implements IClienteService {
 		// TODO Auto-generated method stub
 		return clienteDao.findAllRegiones();
 	}
+
 }
