@@ -18,8 +18,8 @@ INSERT INTO regiones (id,nombre) VALUES (6, 'Africa');
 INSERT INTO regiones (id,nombre) VALUES (7, 'Oceania');
 INSERT INTO regiones (id,nombre) VALUES (8, 'Antartida');
 
-INSERT INTO `usuarios` (username, password, enabled) VALUES ('diego','$2a$10$c.OXMl22oBdSK8spNXohxeTh0T4sjuvGPdZhZ4O2RNMrDdWuN6tjy',1);
-INSERT INTO `usuarios` (username, password, enabled) VALUES ('admin','$2a$10$rSdhNkyWuL9xJ9nT2fUTyexNhXiVu8li2FTbOsm8J/T4lxgOj7Qey',1);
+INSERT INTO `usuarios` (username, password, enabled, nombre, apellido, email) VALUES ('diego','$2a$10$c.OXMl22oBdSK8spNXohxeTh0T4sjuvGPdZhZ4O2RNMrDdWuN6tjy',1,'Diego Alejandro', 'Franco Cuesta', 'diego.fc.1@hotmail.com');
+INSERT INTO `usuarios` (username, password, enabled, nombre, apellido, email) VALUES ('admin','$2a$10$rSdhNkyWuL9xJ9nT2fUTyexNhXiVu8li2FTbOsm8J/T4lxgOj7Qey',1,'Chuck', 'Zchuldiner', 'Chuck@hotmail.com');
 
 INSERT INTO `roles` (nombre) VALUES ('ROLE_USER');
 INSERT INTO `roles` (nombre) VALUES ('ROLE_ADMIN');

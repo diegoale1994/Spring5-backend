@@ -19,7 +19,7 @@ import com.testmios.springboot.backend.apirest.models.dao.IUsuarioDao;
 import com.testmios.springboot.backend.apirest.models.entity.Usuario;
 
 @Service
-public class UsuarioService implements UserDetailsService {
+public class UsuarioService implements UserDetailsService, IUsuarioService {
 	
 	private Logger logger = LoggerFactory.getLogger(UsuarioService.class);
 	@Autowired
@@ -42,6 +42,13 @@ public class UsuarioService implements UserDetailsService {
 				.collect(Collectors.toList());
 		return new User(usuario.getUsername(), usuario.getPassword(), usuario.getEnabled(), true, true, true,
 				authorities);
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public Usuario findByUsername(String username) {
+		// TODO Auto-generated method stub
+		return usuarioDao.findByUsername(username);
 	}
 
 }
