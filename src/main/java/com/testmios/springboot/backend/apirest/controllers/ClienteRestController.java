@@ -57,7 +57,7 @@ public class ClienteRestController {
 	public Page<Cliente> index(@PathVariable("page") Integer page) {
 		return clienteService.findAll(PageRequest.of(page, 4));
 	}
-	@Secured({"ROLE_ADMIN","ROLE_USER"})
+	//@Secured({"ROLE_ADMIN","ROLE_USER"})
 	@GetMapping("/clientes/{id}")
 	public ResponseEntity<?> show(@PathVariable Long id) {
 		Cliente cliente = null;
