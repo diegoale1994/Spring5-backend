@@ -9,7 +9,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.testmios.springboot.backend.apirest.models.dao.IClienteDao;
+import com.testmios.springboot.backend.apirest.models.dao.IFacturaDao;
 import com.testmios.springboot.backend.apirest.models.entity.Cliente;
+import com.testmios.springboot.backend.apirest.models.entity.Factura;
 import com.testmios.springboot.backend.apirest.models.entity.Region;
 
 @Service
@@ -17,6 +19,10 @@ public class ClienteServiceImpl implements IClienteService {
 
 	@Autowired
 	private IClienteDao clienteDao;
+	
+	@Autowired
+	private IFacturaDao facturaDao;
+	
 	@Override
 	@Transactional(readOnly=true)
 	public List<Cliente> findAll() {
@@ -55,6 +61,24 @@ public class ClienteServiceImpl implements IClienteService {
 	public List<Region> findAllRegiones() {
 		// TODO Auto-generated method stub
 		return clienteDao.findAllRegiones();
+	}
+
+	@Override
+	@Transactional(readOnly=true)
+	public Factura findFacturaById(Long id) {
+		return facturaDao.findById(id).orElse(null);
+	}
+
+	@Override
+	@Transactional
+	public Factura saveFactura(Factura factura) {
+		return facturaDao.save(factura);
+	}
+
+	@Override
+	@Transactional
+	public void deleteFacura(Long id) {
+		facturaDao.deleteById(id);
 	}
 
 }

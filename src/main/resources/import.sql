@@ -42,7 +42,12 @@ INSERT INTO `productos` (nombre, precio, create_at) VALUES ('Coleccion de autos 
 INSERT INTO `productos` (nombre, precio, create_at) VALUES ('Iphone 8', 4500000, NOW());
 
 INSERT INTO facturas (descripcion, observacion, cliente_id, create_at) VALUES('Factura test No 1', null, 1, NOW())
+INSERT INTO facturas (descripcion, observacion, cliente_id, create_at) VALUES('Factura test No 2', 'atencion falta pago', 1, NOW())
 
 INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(2,1,1);
 INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(1,1,9);
 INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(1,1,2);
+
+INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(2,2,2);
+INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(1,2,5);
+INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(3,2,6);
